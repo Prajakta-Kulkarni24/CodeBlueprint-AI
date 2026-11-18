@@ -1,0 +1,439 @@
+/* =========================================
+   CREATE PROJECT PAGE
+========================================= */
+
+.create-project-form {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto;
+}
+
+.create-form-section {
+    padding: 28px;
+    border-radius: 14px;
+}
+
+.create-form-section .section-heading {
+    margin-bottom: 26px;
+}
+
+.create-form-section .section-heading h2 {
+    font-size: 19px;
+    font-weight: 650;
+    margin: 0 0 7px;
+    color: var(--dashboard-heading);
+}
+
+.create-form-section .section-heading p {
+    font-size: 13px;
+    margin: 0;
+    color: var(--dashboard-muted);
+}
+
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.create-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 22px;
+}
+
+.create-form-group:last-child {
+    margin-bottom: 0;
+}
+
+.create-form-group label {
+    color: var(--dashboard-heading);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.required-mark {
+    color: #ef6464;
+    margin-left: 4px;
+}
+
+.create-form-group input,
+.create-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+    border-radius: 9px;
+    border: 1px solid var(--dashboard-border);
+    background: var(--dashboard-input);
+    color: var(--dashboard-text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.create-form-group input {
+    height: 46px;
+}
+
+.create-form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.create-form-group input::placeholder,
+.create-form-group textarea::placeholder {
+    color: var(--dashboard-muted);
+    opacity: 0.8;
+}
+
+.create-form-group input:focus,
+.create-form-group textarea:focus {
+    border-color: var(--dashboard-accent);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* =========================================
+   UPLOAD AREA
+========================================= */
+
+.create-upload-area {
+    width: 100%;
+    min-height: 230px;
+    box-sizing: border-box;
+    border: 2px dashed var(--dashboard-border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.create-upload-area:hover,
+.create-upload-area:focus-visible {
+    border-color: var(--dashboard-accent);
+    background: var(--dashboard-hover);
+    outline: none;
+}
+
+.create-upload-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--dashboard-accent);
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.upload-cloud-icon {
+    font-size: 34px;
+    line-height: 1;
+}
+
+.upload-arrow-icon {
+    position: absolute;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.create-upload-icon {
+    position: relative;
+}
+
+.create-upload-area h3 {
+    color: var(--dashboard-heading);
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.create-upload-area p {
+    color: var(--dashboard-muted);
+    font-size: 13px;
+    margin: 0 0 16px;
+}
+
+.create-browse-btn {
+    background: var(--dashboard-accent);
+    color: #ffffff;
+    padding: 10px 19px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   FOLDER BUTTON
+========================================= */
+
+.create-folder-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin: 17px auto 0;
+    padding: 11px 16px;
+    border: 1px solid var(--dashboard-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--dashboard-text);
+    font-size: 13px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.create-folder-btn:hover {
+    background: var(--dashboard-hover);
+    border-color: var(--dashboard-accent);
+}
+
+
+/* =========================================
+   SELECTED FILES
+========================================= */
+
+.create-selected-files {
+    margin-top: 25px;
+}
+
+.create-selected-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.create-selected-header h3 {
+    color: var(--dashboard-heading);
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+.create-selected-header p {
+    color: var(--dashboard-muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+.create-clear-btn {
+    border: none;
+    background: transparent;
+    color: #ef6464;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.create-file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.create-file-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--dashboard-border);
+    border-radius: 9px;
+    background: var(--dashboard-input);
+    min-width: 0;
+}
+
+.create-file-icon {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--dashboard-accent);
+}
+
+.create-file-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.create-file-name {
+    color: var(--dashboard-text);
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.create-file-size {
+    color: var(--dashboard-muted);
+    font-size: 11px;
+}
+
+.create-remove-file {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--dashboard-muted);
+    cursor: pointer;
+}
+
+.create-remove-file:hover {
+    color: #ef6464;
+    background: rgba(239, 100, 100, 0.1);
+}
+
+.create-more-files {
+    color: var(--dashboard-muted);
+    font-size: 12px;
+    margin: 12px 0 0;
+}
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.create-error-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 16px;
+    border: 1px solid rgba(239, 100, 100, 0.35);
+    border-radius: 9px;
+    background: rgba(239, 100, 100, 0.08);
+    color: #ef6464;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.create-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 13px;
+    padding: 5px 0 15px;
+}
+
+.create-cancel-btn,
+.create-submit-btn {
+    min-height: 43px;
+    padding: 0 21px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s, background 0.2s;
+}
+
+.create-cancel-btn {
+    border: 1px solid var(--dashboard-border);
+    color: var(--dashboard-text);
+    background: transparent;
+}
+
+.create-cancel-btn:hover {
+    background: var(--dashboard-hover);
+}
+
+.create-submit-btn {
+    border: none;
+    background: var(--dashboard-accent);
+    color: #ffffff;
+}
+
+.create-submit-btn:hover:not(:disabled) {
+    opacity: 0.88;
+}
+
+.create-submit-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.create-project-form + .dashboard-footer {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .create-project-form {
+        gap: 17px;
+    }
+
+    .create-form-section {
+        padding: 20px;
+    }
+
+    .create-upload-area {
+        min-height: 205px;
+    }
+
+    .create-form-actions {
+        flex-wrap: wrap;
+    }
+
+    .create-cancel-btn,
+    .create-submit-btn {
+        flex: 1;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .create-form-section {
+        padding: 16px;
+    }
+
+    .create-selected-header {
+        align-items: flex-start;
+    }
+
+    .create-folder-btn {
+        width: 100%;
+        font-size: 12px;
+    }
+
+}
