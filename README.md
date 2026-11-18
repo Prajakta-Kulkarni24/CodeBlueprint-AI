@@ -42,39 +42,6 @@ The system aims to simplify code understanding and reduce the effort required fo
 - Git and GitHub – Version control and project management
 - Visual Studio Code – Development environment
 
-# Project Structure
-
-CodeBlueprint-AI/
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── styles/
-│   ├── package.json
-│   └── vite.config.js
-│
-├── backend/
-│   ├── analyzers/
-│   │   ├── fileAnalyzer/
-│   │   ├── folderAnalyzer/
-│   │   ├── languageDetector/
-│   │   ├── dependencyAnalyzer/
-│   │   ├── codeMetrics/
-│   │   ├── securityAnalyzer/
-│   │   └── architectureAnalyzer/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── server.js
-│   └── package.json
-│
-├── .gitignore
-└── README.md
-
-Note: The structure above represents the main project organization. Actual files and folders may vary.
 
 # Installation and Setup
 
